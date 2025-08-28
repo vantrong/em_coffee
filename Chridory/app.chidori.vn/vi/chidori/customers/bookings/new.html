@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from app.chidori.vn/vi/chidori/customers/bookings/new by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Aug 2025 16:43:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+  Chidori — Đặt chỗ online
+</title>
+
+    <meta name="application-name" content="Chidori">
+    <meta name="description" content="Chidori | coffee in bed®">
+    <meta name="robots" content="noindex">
+
+    <link rel="icon" type="image/x-icon" href="../../../../assets/favicon-9ab652c7125c9219c7a0b90ac91a351f5f02d9bf39b1b16d3d511618bd2ee6c8.ico" />
+    <link rel="icon" type="image/png" href="../../../../assets/favicon-32x32-e494d3387b154ba5c4b71508540bfa20c1143941eb7aa64693a143fec4352fb0.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../../../../assets/favicon-16x16-1a870f0d66ff035bfd179852b320bde6bdcb03b4675f715ba5c69041eb072da6.png" sizes="16x16" />
+    <link rel="apple-touch-icon" type="image/png" href="../../../../assets/apple-touch-icon-a1dad8edeb9adc497732e90a10499e184068fde67de5ee6a19004c05a58f431f.png" />
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="1IcXWYL9uEgEScEoYrUST5Vwls3lV4Y29hCFCGrbKzMm-Di6fLQIK1B7k0wIxsdE9eR2hAaBqQY_xl9T5IR7ZQ" />
+    
+
+    <link rel="stylesheet" href="../../../../assets/application-234fb34cf9d32aa0ef67e70bcf7d260d7fb49d0d96ec253e1779dfae6d581716.css" data-turbo-track="reload" />
+    <script src="../../../../assets/application-576ed5f22e1746536a0ea56ab5a877ac98ae8c50b3d6bd5ebc2d73999a85a269.js" data-turbo-track="reload" defer="defer"></script>
+    <script src="../../../../assets/iframeResizer.contentWindow-c2f367bcc47d97c9fbeab3b0367e755bcfed1a2404503b80f5497057b1327c9b.js" data-turbo-track="reload" defer="defer"></script>
+
+  </head>
+  <body>
+    <div class="container max-w-screen-sm mx-auto py-8 px-4 sm:px-6">
+        <div id="flash-alert">
+</div>
+
+        <h1 class="w-full text-center mb-12 mt-8">
+  Chidori — Đặt chỗ online
+</h1>
+<form id="booking-form" data-controller="booking-form future-date-time-input" data-future-date-time-input-current-timestamp-value="1756401162000" data-booking-form-target="form" data-booking-form-combos-select-url-value="https://app.chidori.vn/vi/chidori/combos/select" data-booking-form-vacancies-url-value="https://app.chidori.vn/vi/chidori/vacancies" data-booking-form-duplication-check-url-value="https://app.chidori.vn/vi/chidori/customers/bookings/duplication_check" data-action="change-&gt;booking-form#clear change-&gt;booking-form#enableSubmitIfValid customer-select-location:connect-&gt;booking-form#disableDates" action="https://app.chidori.vn/vi/chidori/customers/bookings" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="nIP_XkRe92gNVVjVHDaWkHrmKeFgzWp2s3eGHdKFkHod1BA_ZSlnSngTtIx8KNu9jECz08OyKVcWJO5zBSvUgA" autocomplete="off" />
+  <div class="flex flex-col gap-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Thông tin liên lạc</h3>
+      </div>
+      <div class="card-body">
+        
+          <input value="true" autocomplete="off" type="hidden" name="booking[customer_attributes][input_from_customer]" id="booking_customer_attributes_input_from_customer" />
+          <div data-controller="customer-search" data-customer-search-path-value="/vi/chidori/bookings/customer_search">
+            <div class="form-item required">
+              <label for="booking_customer_attributes_phone">Số điện thoại</label>
+              <div class="relative">
+                <input class="w-full pr-8" required="required" data-action="change-&gt;customer-search#changePhoneInput" type="tel" name="booking[customer_attributes][phone]" id="booking_customer_attributes_phone" />
+                <div class="hidden absolute top-2.5 right-2.5 h-5 w-5 animate-spin text-xl" data-customer-search-target="spinner">
+                  <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+                </div>
+              </div>
+            </div>
+            <turbo-frame data-customer-search-target="frame" id="booking-customer-search"></turbo-frame>
+</div>      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Thông tin đặt chỗ</h3>
+      </div>
+      <div class="card-body flex flex-col space-y-6">
+        <div class="form-item required">
+          <label for="booking_location_id">Chi nhánh</label>
+          <div id="selected-location">
+            <a data-turbo-frame="turbo-frame-anchor" data-booking-form-target="locationLink" href="../../locations/select.html">
+              <select required="required" onmousedown="event.preventDefault()" name="booking[location_id]" id="booking_location_id"><option value="">Chọn chi nhánh bạn muốn ghé thăm</option>
+</select>
+</a>
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="form-item required">
+            <label for="booking_combo_id">
+              Không gian và gói dịch vụ
+</label>          </div>
+          <div class="min-h-[2.625rem]">
+            <turbo-frame data-booking-form-target="comboListFrame" id="combo-list"></turbo-frame>
+          </div>
+        </div>
+        
+<div id="date-time-fields" class="flex flex-col sm:flex-row gap-6">
+  <div class="sm:basis-2/5 form-item required">
+    <label for="booking_date">Ngày đến</label>
+    <div class="relative">
+      <input required="required" data-action="future-date-time-input#disablePastTimeOptions" data-controller="flatpickr" data-flatpickr-min-date="&quot;2025-08-28T23:42:42.989+07:00&quot;" data-flatpickr-max-date="&quot;2025-09-28T23:42:42.989+07:00&quot;" data-flatpickr-alt-format="%a, %d %b, %Y" data-flatpickr-alt-input="true" data-flatpickr-default-date="&quot;2025-08-28T23:42:42.989+07:00&quot;" data-flatpickr-locale-value="vi" data-future-date-time-input-target="dateInput" data-booking-form-target="dateInput" type="text" name="booking[date]" id="booking_date" />
+      <span class="end-icon">
+        <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity=".2" d="M20.25 15 15 20.25V15h5.25Z" fill="currentColor" />
+  <path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h10.19a1.487 1.487 0 0 0 1.06-.44l4.81-4.81a1.487 1.487 0 0 0 .44-1.06V4.5A1.5 1.5 0 0 0 19.5 3Zm-15 1.5h15v9.75H15a.75.75 0 0 0-.75.75v4.5H4.5v-15Zm13.94 11.25-2.69 2.69v-2.69h2.69Z" fill="currentColor" />
+  <path fill="currentColor" d="M4.068 8.264h16v1.5h-16z" />
+</svg>
+
+      </span>
+    </div>
+  </div>
+  <div class="sm:basis-3/5 flex flex-col gap-6">
+    <div class="form-item required">
+      <label for="booking_start_time">Giờ đến</label>
+      <div class="relative flex gap-2 items-center">
+        <input type="hidden" id="booking_start_time_1i" name="booking[start_time(1i)]" value="1" autocomplete="off" />
+<input type="hidden" id="booking_start_time_2i" name="booking[start_time(2i)]" value="1" autocomplete="off" />
+<input type="hidden" id="booking_start_time_3i" name="booking[start_time(3i)]" value="1" autocomplete="off" />
+<select id="booking_start_time_4i" name="booking[start_time(4i)]" required="required" data-future-date-time-input-target="timeInput" data-action="future-date-time-input#disablePastTimeOptions">
+<option value="">Chọn giờ</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+</select>
+ : <select id="booking_start_time_5i" name="booking[start_time(5i)]" required="required" data-future-date-time-input-target="timeInput" data-action="future-date-time-input#disablePastTimeOptions">
+<option value="">Chọn phút</option>
+<option value="00">00</option>
+<option value="05">05</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="30">30</option>
+<option value="35">35</option>
+<option value="40">40</option>
+<option value="45">45</option>
+<option value="50">50</option>
+<option value="55">55</option>
+</select>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="form-item">
+          <label for="booking_notes">Lời nhắn</label>
+          <div class="mb-1 -mt-1 text-sm opacity-70">
+            Ghi chú về đặt chỗ. Chidori sẽ cố gắng hỗ trợ trong điều kiện cho phép
+          </div>
+          <textarea rows="2" name="booking[notes]" id="booking_notes">
+</textarea>
+        </div>
+      </div>
+    </div>
+</div>  <turbo-frame data-booking-form-target="vacanciesFrame" id="vacancies"></turbo-frame>
+  <turbo-frame data-booking-form-target="duplicationCheckFrame" id="duplication-check"></turbo-frame>
+
+  <input type="submit" name="commit" value="Chọn phương thức thanh toán →" class="btn-primary mt-8 w-full rounded-full" disabled="disabled" data-booking-form-target="submitButton" data-disable-with="Chọn phương thức thanh toán →" />
+</form>
+    </div>
+    <turbo-frame id="turbo-frame-anchor"></turbo-frame>
+    <turbo-frame id="modal-portal"></turbo-frame>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-985622298"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-985622298');
+      </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b80855c040754044b72b14564ff7c0f0","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from app.chidori.vn/vi/chidori/customers/bookings/new by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Aug 2025 16:43:42 GMT -->
+</html>

@@ -1,0 +1,47 @@
+<turbo-frame id="turbo-frame-anchor">
+  <turbo-stream action="https://app.chidori.vn/vi/chidori/locations/select/update" target="selected-location"><template>
+    <div data-controller="customer-select-location" data-customer-select-location-disabled-dates-value="[&quot;2025-01-27&quot;,&quot;2025-01-28&quot;,&quot;2025-01-29&quot;,&quot;2025-01-30&quot;,&quot;2025-01-31&quot;]">
+  <input value="7" data-booking-form-target="locationInput" autocomplete="off" type="hidden" name="booking[location_id]" id="booking_location_id" />
+  <div class="w-full cursor-pointer flex flex-col sm:flex-row justify-start bg-beige-50">
+    <!--
+      <span class="flex justify-center items-center w-full h-auto sm:w-[185px] sm:h-[185px] relative bg-beige-200 box-border sm:after:content-[''] sm:after:absolute sm:after:w-full after:left-0 sm:after:bottom-0 sm:after:h-6 sm:after:bg-beige-300 ">
+          <img class="mx-auto" src="/assets/select_location-7a992cb184fd8dbb1d86baf9aa6767edab78825f76a3d43fd4d20732632c1213.png" />
+      </span>
+      -->
+    <span class="p-3 sm:px-6 sm:py-5 flex-1 text-left flex flex-col gap-6 ">
+      <div class="text-left ">
+        <h4 class="text-beige-700">Chidori Vĩnh Viễn</h4>
+        <div class=" text-amber-600 ">360-362 Vĩnh Viễn, Phường Diên Hồng (Quận 10 cũ), Hồ Chí Minh</div>
+      </div>
+      <div class="flex flex-row gap-2 text-blue-800 font-bold">
+        <a class="text-center rounded-full bg-blue-100 hover:bg-blue-200 hover:text-blue-700  py-2 px-4" data-turbo-frame="turbo-frame-anchor" href="../select.html">Đổi chi nhánh</a>
+        <button type="button" class="flex gap-2 justify-center items-center rounded-full bg-blue-100 hover:bg-blue-200 hover:text-blue-700 p-1 py-2 sm:px-4" data-action="customer-select-location#toggleMap" data-customer-select-location-target="buttonToggleMap">
+          <span class="text-2xl"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5.25 21.75h13.5m-6.75-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+    <path d="M19.5 9.75c0 6.75-7.5 12-7.5 12s-7.5-5.25-7.5-12a7.5 7.5 0 0 1 15 0Z" />
+  </g>
+</svg>
+</span>
+          Map
+          <span class="text-2xl transition-transform arrow-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M19.5 9 12 16.5 4.5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
+</span>
+        </button>
+      </div>
+    </span>
+  </div>
+  <div class="hidden h-80 w-full" data-customer-select-location-target="map">
+    <iframe
+        class="w-full h-80 border-0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDh3pHhF5rxkmx0eH26goUC9BsIlTAhydU%20%20%20%20&amp;q=place_id:ChIJS1EZSvMvdTEREf1lHXRnEVs">
+    </iframe>
+  </div>
+</div>
+</template></turbo-stream></turbo-frame>
