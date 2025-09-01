@@ -1,9 +1,45 @@
+
+
 body {
   font-family: Arial, sans-serif;
   background: #faf6f1;
   padding: 20px;
   color: #4a2c18;
 }
+
+
+#loadingSpinner {
+  display: none; /* mặc định ẩn */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 3000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* màu xám nhạt */
+  border-top: 6px solid #4CAF50; /* màu xoay */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loadingSpinner p {
+  color: white;
+  font-size: 16px;
+}
+
+
 h1 {
   text-align: center;
   color: #5a3820;
@@ -39,7 +75,7 @@ input, select, textarea {
 button {
   display: block;
   margin: 20px auto;
-  background: #87a6c7;
+  background: #a36b48;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -48,5 +84,78 @@ button {
   cursor: pointer;
 }
 button:hover {
-  background: #6f8dad;
+  background: #ad885e;
 }
+
+
+.toast {
+  visibility: show;
+  min-width: 250px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 5px;
+  font-size: 16px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  /* top: 50px; */
+}
+
+
+/* Modal (Confirm Box) */
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 2000; 
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 15% auto; 
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%; max-width: 400px;
+      text-align: center;
+    }
+    .modal button {
+      width: auto; padding: 10px 20px; margin: 10px;
+    }
+ 
+	
+	.modal-footer {
+	  display: flex;
+	  justify-content: flex-end; /* dồn về bên phải */
+	  gap: 10px; /* khoảng cách giữa 2 nút */
+	  margin-top: 15px;
+	}
+
+	.btn {
+	  padding: 8px 16px;
+	  border: none;
+	  border-radius: 6px;
+	  cursor: pointer;
+	  font-size: 14px;
+	}
+
+	.btn-cancel {
+	  background: #f44336;
+	  color: white;
+	}
+
+	.btn-ok {
+	  background: #4CAF50;
+	  color: white;
+	}
+	

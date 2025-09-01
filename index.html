@@ -7,8 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Spinner -->
+<div id="loadingSpinner">
+  <div class="spinner"></div>
+  <p>Đang xử lý...</p>
+</div>	
   <h1>Êm Coffee</h1>
-
+	<div id="toast" class="toast">Đặt chỗ thành công!</div>
   <form id="bookingForm">
     <div class="form-section">
       <h3>Thông tin liên lạc</h3>
@@ -19,18 +24,16 @@
     <div class="form-section">
       <h3>Thông tin đặt chỗ</h3>
 
-      <label for="branch">Chi nhánh*</label>
-      <select id="branch" name="branch" required>
-        <option value="">Chọn chi nhánh</option>
-        <option value="Chi nhánh 1">Chi nhánh 1</option>
-        <option value="Chi nhánh 2">Chi nhánh 2</option>
-      </select>
+		<label for="people">Họ và tên *</label>
+      <input type="text" id="name" name="name"  required>
 
-      <label for="service">Không gian và gói dịch vụ*</label>
+      <label for="service">Gói dịch vụ *</label>
       <select id="service" name="service" required>
         <option value="">Chọn combo</option>
-        <option value="Combo 1">Combo 1</option>
-        <option value="Combo 2">Combo 2</option>
+        <option value="2H">2 Giờ</option>
+        <option value="4H" selected>4 Giờ</option>
+		 <option value="8H">8 Giờ</option>
+		<option value="8HĐ">Combo đêm 8h (22h đến 8h)</option>
       </select>
 
       <label for="date">Ngày đến*</label>
@@ -45,10 +48,23 @@
       <label for="note">Lời nhắn</label>
       <textarea id="note" name="note" rows="3"></textarea>
     </div>
-
-    <button type="submit">Đặt chỗ ngay →</button>
   </form>
-
+  <button  id ="confirmBtn">Đặt chỗ</button>
+  
+   <!-- Modal Confirm -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <h3>Bạn có chắc chắn muốn đặt chỗ?</h3>
+	   <div class="modal-footer btn">
+		  <button class="btn-cancel" id="cancelBtn">Hủy</button>
+		  <button class="btn-ok" id="okBtn">Đồng ý</button>
+	  </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
+
 </html>
+
+
+
