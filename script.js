@@ -54,6 +54,25 @@ document.addEventListener('DOMContentLoaded', function () {
     //document.getElementById('bookingForm').submit(); // đảm bảo hàm submitForm() đã được định nghĩa
 	form.requestSubmit()
   });
+  
+   const openPdf = document.getElementById("openPdf");
+  const pdfModal = document.getElementById("pdfModal");
+  const closePdf = document.getElementById("closePdf");
+
+  openPdf.addEventListener("click", function (e) {
+    e.preventDefault(); // chặn link
+    pdfModal.style.display = "block";
+  });
+
+  closePdf.addEventListener("click", function () {
+    pdfModal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === pdfModal) {
+      pdfModal.style.display = "none";
+    }
+  });
 });
 
 

@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Đặt chỗ - Êm Coffee</title>
+  <link rel="icon" type="image/png" href="LOGO.png">
   <link rel="stylesheet" href="style.css">
+ <img src="logo.png" alt="Logo quán" class="logo" >
+    <h1 class="site-title">Êm Coffee</h1>
 </head>
 <body>
 <!-- Spinner -->
 <div id="loadingSpinner">
   <div class="spinner"></div>
   <p>Đang xử lý...</p>
-</div>	
-  <h1>Êm Coffee</h1>
+</div>
+		
 	<div id="toast" class="toast">Đặt chỗ thành công!</div>
   <form id="bookingForm">
     <div class="form-section">
@@ -47,6 +50,23 @@
 
       <label for="note">Lời nhắn</label>
       <textarea id="note" name="note" rows="3"></textarea>
+	  
+      <div class="terms">
+		  <input type="checkbox" id="agree" required>
+		  <label for="agree">
+			Tôi đồng ý với <a href="#" id="openPdf">Điều khoản chung</a>
+		  </label>
+	  </div>
+	
+			 <!-- Modal PDF -->
+		<div id="pdfModal" class="modal">
+		  <div class="modal-content">
+			<span id="closePdf" class="close">&times;</span>
+			
+			<iframe src="Nội quy PDF.pdf" width="100%" height="500px"></iframe>
+		  </div>
+		</div>	
+		
     </div>
   </form>
   <button  id ="confirmBtn">Đặt chỗ</button>

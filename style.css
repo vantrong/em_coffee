@@ -140,7 +140,15 @@ button:hover {
 	  gap: 10px; /* khoảng cách giữa 2 nút */
 	  margin-top: 15px;
 	}
-
+	
+	.close {
+	  /* position: absolute; */
+		top: 10px; right: 15px;
+		font-size: 24px;
+		cursor: pointer;
+		color: #e87016;
+		font-size: 35px;
+	}
 	.btn {
 	  padding: 8px 16px;
 	  border: none;
@@ -159,3 +167,53 @@ button:hover {
 	  color: white;
 	}
 	
+	
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.terms input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1); /* cho checkbox to hơn chút */
+}
+
+.terms a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.terms input[type="checkbox"] {
+    width: 10%
+}
+
+
+
+
+.header {
+  display: flex;
+  align-items: center;   /* căn giữa theo chiều dọc */
+  gap: 10px;             /* khoảng cách giữa logo và chữ */
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 120px;     
+  height: auto;     
+  display: block;   
+  margin: 0 auto;   
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
