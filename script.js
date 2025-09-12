@@ -1,6 +1,6 @@
 
 
-const API_URL = 'https: //script.google.com/macros/s/AKfycbz28qiSKRfD449Cb90W_6EslgZBeIULcXRzOrHiSQQzCAVr4r5beUfX7g3cEGorxiGt/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwdyDOis3llzgDeZpdlzcVsiKOs195KMVY9e6CRbzHi8YPpsiriugte3tl9vRblYi29/exec';
 const form = document.getElementById("bookingForm");
 
  
@@ -104,7 +104,7 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     };
 
   // Nếu API_URL bắt đầu bằng link Google Apps Script thật thì sẽ gửi request
-  if (API_URL.startsWith('https: //script.google.com')) {
+  if (API_URL.startsWith('https://script.google.com')) {
 	await fetch(API_URL,
     { 
 	  method: 'POST', 
