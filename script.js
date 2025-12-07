@@ -102,7 +102,16 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
 	time: document.getElementById('time').value,
 	note: document.getElementById('note').value.trim(),
     };
-
+	
+	if(Number(data.people) > 1 && data.service === '2H')
+	{
+		showToast("Combo 2H chỉ áp dụng cho 1 khách, bạn vui lòng chọn lại, cảm ơn", "error");
+		//alert('Combo 2H chỉ áp dụng cho 1 khách, bạn vui lòng chọn lại, cảm ơn');
+		hideLoading();
+		return;
+	}
+	
+		
   // Nếu API_URL bắt đầu bằng link Google Apps Script thật thì sẽ gửi request
   if (API_URL.startsWith('https://script.google.com')) {
 	await fetch(API_URL,
@@ -116,7 +125,9 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
 } else {
     // Trường hợp chưa cấu hình link thật thì chỉ log ra console
 	
-	alert('Gửi yêu cầu thành công! (Demo: dữ liệu đã log ở console)');
+	
+	{
+	}
 }
   e.target.reset();
   hideLoading();
