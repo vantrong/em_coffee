@@ -121,7 +121,7 @@ document.getElementById('bookingForm').addEventListener('submit', async (e) => {
     });
 	//alert('Cảm ơn bạn! Chúng mình sẽ liên hệ sớm.');
 	
-	showToast("Cảm ơn bạn! Chúng mình sẽ liên hệ sớm.");
+	showToast("Cảm ơn bạn! Bạn đã đặt chỗ thành công.");
 } else {
     // Trường hợp chưa cấu hình link thật thì chỉ log ra console
 	
